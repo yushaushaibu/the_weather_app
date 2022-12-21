@@ -2,9 +2,17 @@ const form = document.querySelector('form');
 const input = document.querySelector('#input');
 const btn = document.querySelector('#btn');
 
-input.addEventListener("input", (e) => {
-    getWeather(e.target.value);
-});
+let timeoutId;
+function onInput(e) {
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+    };
+    timeoutId = setTimeout(() => {
+        getWeather(e.target.value);
+    }, 1000)
+}
+
+input.addEventListener("input", onInput);
 
 
 // Fetch weather data
