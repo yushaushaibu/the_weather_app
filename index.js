@@ -6,14 +6,14 @@ input.addEventListener('input', () => {});
 
 // Fetch weather data
 async function getWeather() {
-    const response = axios.get('https://api.openweathermap.org/data/2.5/weather?', {
+    const response = await axios.get('https://api.openweathermap.org/data/2.5/weather?', {
         params: {
             q: 'toronto,CA',
             appid: '96a852a58c3f6426b65771dcefb23054',
             units: 'metric'
         }
     })
-    console.log(response);
+    return response;
 };
 
 getWeather();
