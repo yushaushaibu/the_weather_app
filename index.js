@@ -1,6 +1,8 @@
 const form = document.querySelector('form');
 const input = document.querySelector('#input');
 const btn = document.querySelector('#btn');
+const output = document.querySelector('#output');
+
 
 // prevents a function from being called after each keypress
 function debounce(fn, delay = 1000) {
@@ -32,5 +34,7 @@ async function getWeather(location) {
             units: 'metric'
         }
     })
-    console.log(response);
+    // console.log(response);
+    console.log(response.data.name)
 };
+
