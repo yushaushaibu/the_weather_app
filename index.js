@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 const input = document.querySelector('#input');
 const btn = document.querySelector('#btn');
 const output = document.querySelector('#output');
+let cityName = document.querySelector('#cityName');
 
 
 // prevents a function from being called after each keypress
@@ -19,8 +20,8 @@ function debounce(fn, delay = 1000) {
 
 // calls getWeather function with a city name as argument 
 async function onInput(e) {
-    const weather = await getWeather(e.target.value);
-    console.log(weather);
+    const weatherData = await getWeather(e.target.value);
+    cityName.innerHTML = `${weatherData.name}`
 }
 
 input.addEventListener("input", debounce(onInput, 700));
@@ -37,4 +38,3 @@ async function getWeather(location) {
     })
     return response.data;
 };
-
