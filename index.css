@@ -44,6 +44,6 @@ body {
   cursor: pointer;
 }
 
-.card {
-  
+.input {
+  width: 19em;
 }

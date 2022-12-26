@@ -19,22 +19,21 @@
         <div class="main-section">
             <div class="form-wrap">
                 <form>
-                    <input type="text" id="input" class="input" placeholder="Search for a city">
-                    <button id="btn" class="btn">Search</button>
+                    <div class="ui large icon input">
+                        <input type="text" id="input" class="input" placeholder="Enter a city">
+                        <i class="search icon"></i>
+                    </div>
+                    <!-- <button id="btn" class="btn">Search</button> -->
                 </form>
             </div>
         </div>
-        <div id="card">
-            <div class="ui card centered">
-                <div class="content">
-                  <div class="header">Cute Dog</div>
-                  <div class="meta">2 days ago</div>
-                  <div class="description">
-                    <p>Cute dogs come in a variety of shapes and sizes. Some cute dogs are cute for their adorable faces, others for their tiny stature, and even others for their massive size.</p>
-                    <p>Many people also have their own barometers for what makes a cute dog.</p>
-                  </div>
-                </div>
-              </div>
+        <div class="ui card centered">
+            <div class="content">
+                <p class="city-text" id="cityText">cincinnati</p>
+                <h2 class="temp-text" id="tempText">15</h2>
+                <div class="weather-icon" id="weatherIcon"></div>
+                <div class="weather-description" id="weatherDescription">Snowy</div>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -44,12 +43,3 @@
 </body>
 
 </html>
-
-<!-- <div class="ui centered card">
-    <div class="image">
-      <img src="/images/avatar2/large/elyse.png">
-    </div>
-    <div class="content">
-      <a class="header">Elyse</a>
-    </div>
-  </div> -->

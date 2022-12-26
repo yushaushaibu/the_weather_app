@@ -18,8 +18,9 @@ function debounce(fn, delay = 1000) {
 }
 
 // calls getWeather function with a city name as argument 
-function onInput(e) {
-    getWeather(e.target.value);
+async function onInput(e) {
+    const weather = await getWeather(e.target.value);
+    console.log(weather);
 }
 
 input.addEventListener("input", debounce(onInput, 700));
@@ -34,7 +35,6 @@ async function getWeather(location) {
             units: 'metric'
         }
     })
-    // console.log(response);
-    console.log(response.data.name)
+    return response.data;
 };
 
