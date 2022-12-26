@@ -2,7 +2,10 @@ const form = document.querySelector('form');
 const input = document.querySelector('#input');
 const btn = document.querySelector('#btn');
 const output = document.querySelector('#output');
-let cityName = document.querySelector('#cityName');
+const cityName = document.querySelector('#cityName');
+const temp = document.querySelector('#temp');
+const icon = document.querySelector('#icon');
+const description = document.querySelector('#description');
 
 
 // prevents a function from being called after each keypress
@@ -21,8 +24,11 @@ function debounce(fn, delay = 1000) {
 // calls getWeather function with a city name as argument 
 async function onInput(e) {
     const weatherData = await getWeather(e.target.value);
-    cityName.innerHTML = `${weatherData.name}`
-}
+    cityName.innerHTML = `${weatherData.name}`;
+    temp.innerHTML = `${weatherData.main.temp}`;
+    icon.src=`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;;
+    description.innerHTML = `${weatherData.weather[0].description}`.toUpperCase();
+};
 
 input.addEventListener("input", debounce(onInput, 700));
 
