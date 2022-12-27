@@ -45,9 +45,30 @@ body {
 }
 
 .input {
-  width: 19em;
+  width: 22rem;
 }
 
 .card {
-  height: 20em;
+  height: 20rem;
+}
+
+.city-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.temp {
+  font-size: 7rem;
+  margin-top: -30px;
+  text-align: center;
+}
+
+img {
+  position: relative;
+  left: 180px;
+}
+
+.description {
+  text-align: center;
+  letter-spacing: .2rem;
 }
