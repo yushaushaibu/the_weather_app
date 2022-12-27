@@ -12,6 +12,8 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
+  background: #0f0c29; /* fallback for old browsers */
+  background: #004e92;
 }
 
 .header {
@@ -20,8 +22,10 @@ body {
   align-items: center;
   text-align: center;
   padding: 1rem;
-  margin: 1rem auto;
+  /* margin: 1rem auto; */
   height: 70px;
+  background-color: #061161;
+  color: #fff;
 }
 
 .form-wrap {
@@ -49,26 +53,26 @@ body {
 }
 
 .card {
-  height: 20rem;
+  height: 25rem;
 }
 
 .city-name {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .temp {
   font-size: 7rem;
-  margin-top: -30px;
+  margin-top: 30px;
   text-align: center;
-}
-
-img {
-  position: relative;
-  left: 180px;
 }
 
 .description {
   text-align: center;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
+  margin-top: 30px;
+}
+
+div.icon-img {
+  text-align: center;
 }

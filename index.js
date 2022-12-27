@@ -25,9 +25,8 @@ function debounce(fn, delay = 1000) {
 async function onInput(e) {
     const weatherData = await getWeather(e.target.value);
     cityName.innerHTML = `${weatherData.name}`;
-    temp.innerHTML = `${weatherData.main.temp}`;
+    temp.innerHTML = `${Math.round(parseFloat(weatherData.main.temp))}`;
     icon.src=`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-    icon.alt=`${weatherData.weather[0].description}`;
     description.innerHTML = `${weatherData.weather[0].description}`.toUpperCase();
 };
 
