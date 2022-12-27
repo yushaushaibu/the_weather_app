@@ -7,7 +7,6 @@ const temp = document.querySelector('#temp');
 const icon = document.querySelector('#icon');
 const description = document.querySelector('#description');
 
-
 // prevents a function from being called after each keypress
 function debounce(fn, delay = 1000) {
     let timeoutId;
@@ -26,7 +25,7 @@ async function onInput(e) {
     const weatherData = await getWeather(e.target.value);
     cityName.innerHTML = `${weatherData.name}`;
     temp.innerHTML = `${Math.round(parseFloat(weatherData.main.temp))}`;
-    icon.src=`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+    icon.src = `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
     description.innerHTML = `${weatherData.weather[0].description}`.toUpperCase();
 };
 
