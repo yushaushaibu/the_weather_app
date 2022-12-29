@@ -37,7 +37,7 @@ body {
 }
 
 .input[type="text"] {
-  width: 270px;
+  width: 290px;
   padding: 0.5rem 1.1rem;
   font-size: 1.9rem;
   outline: none;
@@ -91,6 +91,7 @@ div.icon-img {
   left: 200px;
   font-size: 2.2em;
   text-align: center;
+  visibility: hidden;
 }
 
 .country {
@@ -98,5 +99,6 @@ div.icon-img {
   text-align: center;
   width: 25px;
   padding: 1px;
-  color: white;
+  color: #fff;
+  visibility: hidden;
 }

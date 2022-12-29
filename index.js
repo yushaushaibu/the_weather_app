@@ -7,6 +7,7 @@ const country = document.querySelector('#country');
 const temp = document.querySelector('#temp');
 const icon = document.querySelector('#icon');
 const description = document.querySelector('#description');
+const degree = document.querySelector('.degree');
 
 // prevents a function from being called after each keypress
 const debounce = (fn, delay = 1000) => {
@@ -22,11 +23,13 @@ const debounce = (fn, delay = 1000) => {
 }
 
 // calls getWeather function with a city name as argument 
-const onInput = async (e) => {
-    const weatherData = await getWeather(e.target.value);
+const onInput = async (event) => {
+    const weatherData = await getWeather(event.target.value);
     city.innerHTML = `${weatherData.name}`;
     country.innerHTML = `${weatherData.sys.country}`;
+    country.style.visibility = 'visible';
     temp.innerHTML = `${Math.round(parseFloat(weatherData.main.temp))}`;
+    degree.style.visibility = 'visible';
     icon.src = `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
     description.innerHTML = `${weatherData.weather[0].description}`.toUpperCase();
 };
