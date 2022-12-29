@@ -36,12 +36,17 @@ body {
   margin: 1rem auto;
 }
 
-.input {
-  font-size: 1.1rem;
-  padding: 0.5rem;
+.input[type="text"] {
+  width: 270px;
+  padding: 0.5rem 1.1rem;
+  font-size: 1.9rem;
   outline: none;
-  width: 22rem;
-  border: none;
+  text-align: left;
+  background: transparent;
+  color: #fff;
+  border: 0px solid #adacac;
+  border-bottom-width: 1px;
+  margin: 15px;
 }
 
 .btn {
@@ -54,13 +59,14 @@ body {
   height: 23rem;
 }
 
-.ui.card>.content p, .ui.cards>.card>.content p {
-  margin: 0 0 .1em;
+.ui.card > .content p,
+.ui.cards > .card > .content p {
+  margin: 0 0 0.1em;
 }
-.city-name {
+.city {
   font-size: 1.5rem;
   font-weight: 600;
-  color:#0f0c29
+  color: #0f0c29;
 }
 
 .temp {
@@ -85,4 +91,12 @@ div.icon-img {
   left: 200px;
   font-size: 2.2em;
   text-align: center;
+}
+
+.country {
+  background: rgb(255, 165, 0);
+  text-align: center;
+  width: 25px;
+  padding: 1px;
+  color: white;
 }

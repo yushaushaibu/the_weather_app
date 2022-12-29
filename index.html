@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="index.css">
     <title>The Weather App</title>
 </head>
@@ -19,17 +22,16 @@
         <div class="main-section">
             <div class="form-wrap">
                 <form>
-                    <div class="ui large icon input">
-                        <input type="text" id="input" class="input" placeholder="Enter a city">
-                        <i class="search icon"></i>
-                    </div>
+                    <input type="text" class="input" id="input" placeholder="Enter a city..">
+                    <!-- <i class='fas fa-map-marker-alt' style='font-size:36px'></i> -->
                     <!-- <button id="btn" class="btn">Search</button> -->
                 </form>
             </div>
         </div>
         <div class="ui card centered">
             <div class="content">
-                <p class="city-name" id="cityName"></p>
+                <p class="city" id="city"></p>
+                <p class="country" id="country"></p>
                 <div class="degree">&#8451;</div>
                 <p class="temp" id="temp">-:--</p>
                 <div class="icon-img">
