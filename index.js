@@ -36,7 +36,7 @@ const onInput = async (event) => {
 
 input.addEventListener("input", debounce(onInput, 700));
 
-// Fetch weather data
+// fetch weather data
 const getWeather = async (location) => {
     const response = await axios.get('https://api.openweathermap.org/data/2.5/weather?', {
         params: {

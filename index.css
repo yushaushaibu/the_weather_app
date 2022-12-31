@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  background: #0f0c29; /* fallback for old browsers */
+  background: #0f0c29;
   background: #004e92;
 }
 
@@ -102,3 +102,16 @@ div.icon-img {
   color: #fff;
   visibility: hidden;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  padding: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #0f0c29;
+}
+
